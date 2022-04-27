@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/furniture-store",
         "index": "apps/furniture-store/src/index.html",
@@ -15,9 +17,23 @@
         "tsConfig": "apps/furniture-store/tsconfig.app.json",
         "assets": [
           "apps/furniture-store/src/favicon.ico",
-          "apps/furniture-store/src/assets"
+          "apps/furniture-store/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/web/shared/assets/src",
+            "output": "assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "node_modules/@taiga-ui/icons/src",
+            "output": "assets/taiga-ui/icons"
+          }
         ],
-        "styles": ["apps/furniture-store/src/styles.css"],
+        "styles": [
+          "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
+          "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less",
+          "apps/furniture-store/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -65,7 +81,8 @@
       },
       "defaultConfiguration": "development",
       "options": {
-        "proxyConfig": "apps/furniture-store/proxy.conf.json"
+        "proxyConfig": "apps/furniture-store/proxy.conf.json",
+        "browserTarget": "furniture-store:build:development"
       }
     },
     "extract-i18n": {
@@ -85,7 +102,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/furniture-store"],
+      "outputs": [
+        "coverage/apps/furniture-store"
+      ],
       "options": {
         "jestConfig": "apps/furniture-store/jest.config.ts",
         "passWithNoTests": true

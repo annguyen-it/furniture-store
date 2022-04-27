@@ -1,0 +1,6 @@
+.wrapper {
+  grid-template-areas:
+    'nav'
+    'main';
+  grid-template-rows: var(--fs-nav-bar-height) calc(100vh - var(--fs-nav-bar-height));
+}

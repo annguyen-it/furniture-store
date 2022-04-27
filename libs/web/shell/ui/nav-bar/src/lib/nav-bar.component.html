@@ -1,0 +1,123 @@
+<header class="h-full w-full px-10 flex items-center">
+  <!-- Logo -->
+  <div class="logo h-full w-full lg:w-2/12">
+    <a [routerLink]="['']" class="block h-full">
+      <img src="/assets/images/logo.jpg" alt="Logo" class="h-full max-w-none" />
+    </a>
+  </div>
+
+  <div class="flex justify-end grow">
+    <!-- Links -->
+    <div>
+      <ul class="flex">
+        <li>
+          <button tuiButton>Home</button>
+        </li>
+        <li>
+          <tui-hosted-dropdown
+            tuiDropdownHover
+            tuiDropdownAlign="left"
+            [content]="shopContent"
+          >
+            <button tuiButton iconRight="tuiIconChevronDown">Shop</button>
+          </tui-hosted-dropdown>
+        </li>
+        <li>
+          <tui-hosted-dropdown
+            tuiDropdownHover
+            tuiDropdownAlign="left"
+            [content]="productContent"
+          >
+            <button tuiButton iconRight="tuiIconChevronDown">Product</button>
+          </tui-hosted-dropdown>
+        </li>
+        <li>
+          <button tuiButton>Blog</button>
+        </li>
+        <li>
+          <tui-hosted-dropdown
+            tuiDropdownHover
+            tuiDropdownAlign="left"
+            [content]="pageContent"
+          >
+            <button tuiButton iconRight="tuiIconChevronDown">Page</button>
+          </tui-hosted-dropdown>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Search box -->
+    <div class="flex">
+      <tui-input
+        [(ngModel)]="searchValue"
+        [tuiTextfieldCleaner]="true"
+        [tuiTextfieldLabelOutside]="true"
+        [tuiTextfieldCustomContent]="inputContent"
+        tuiTextfieldSize="m"
+        class="w-80 mr-14 ml-12 !rounded"
+      >
+        Search
+        <ng-template #inputContent>
+          <button
+            tuiButton
+            appearance="fs-primary"
+            class="!h-full !rounded -mr-2"
+          >
+            <i class="mdi mdi-magnify"></i>
+          </button>
+        </ng-template>
+      </tui-input>
+    </div>
+
+    <!-- Buttons -->
+    <div>
+      <button tuiButton icon="tuiIconLogoutLarge">Login</button>
+      <button tuiIconButton icon="tuiIconHeartLarge" class="mx-1"></button>
+      <button
+        tuiIconButton
+        icon='<i class="far fa-random" style="font-size: 21px"></i>'
+        class="mx-1"
+      ></button>
+      <button
+        tuiIconButton
+        icon='<i class="far fa-shopping-bag" style="font-size: 20px"></i>'
+        class="mx-1"
+      ></button>
+    </div>
+  </div>
+  <div></div>
+</header>
+
+<!-- Shop content -->
+<ng-template #shopContent>
+  <ul class="dropdown grid grid-rows-2 grid-cols-3 pt-4">
+    <li
+      *ngFor="let shopUrl of shopUrls"
+      class="dropdown-section w-64 px-4 pb-4"
+    >
+      <h6 class="uppercase">{{ shopUrl.title }}</h6>
+      <ul
+        class="dropdown-section-urls fs-primary-list tui-list tui-list_small tracking-wide"
+      >
+        <li *ngFor="let url of shopUrl.urls" class="tui-list__item">
+          <a tuiLink class="fs-primary-link">{{ url.name }}</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown-section dropdown-section-spec px-4 pb-4">
+      <h6>Images & HTML</h6>
+    </li>
+  </ul>
+</ng-template>
+
+<!-- Product Content -->
+<ng-template #productContent></ng-template>
+
+<!-- Page content -->
+<ng-template #pageContent>
+  <ul class="fs-primary-list tui-list tui-list_small p-4">
+    <li *ngFor="let pageUrl of pageUrls" class="tui-list__item">
+      <a tuiLink class="fs-primary-link">{{ pageUrl.name }}</a>
+    </li>
+  </ul>
+</ng-template>

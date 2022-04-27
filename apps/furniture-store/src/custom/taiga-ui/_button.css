@@ -1,0 +1,29 @@
+/* Primary */
+tui-wrapper[data-appearance='fs-primary'] {
+  color: #ffffff;
+  background-color: var(--fs-secondary);
+}
+
+tui-wrapper[data-appearance='fs-primary'][data-state='hovered'],
+tui-wrapper[data-appearance='fs-primary'][data-state='pressed'] {
+  background-color: var(--fs-primary);
+}
+
+tui-wrapper[data-appearance='fs-primary'][data-state='disabled'] {
+  background-color: #eaecee;
+}
+
+
+/* Flat */
+tui-wrapper[data-appearance='fs-flat'] {
+  color: var(--fs-secondary);
+}
+
+tui-wrapper[data-appearance='fs-flat'][data-state='hovered'],
+tui-wrapper[data-appearance='fs-flat'][data-state='pressed'] {
+  color: var(--fs-primary);
+}
+
+tui-wrapper[data-appearance='fs-flat'][data-state='disabled'] {
+  background-color: #eaecee;
+}

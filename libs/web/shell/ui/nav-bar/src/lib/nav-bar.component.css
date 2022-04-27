@@ -1,0 +1,30 @@
+.logo {
+  height: 37px;
+}
+
+.dropdown {
+  grid-template-areas:
+    '. . spec'
+    '. . spec';
+}
+
+.dropdown-section {
+  @apply font-semibold;
+}
+
+.dropdown-section-spec {
+  grid-area: spec;
+}
+
+.dropdown-section > h6::after {
+  content: '';
+  @apply block w-11 h-px mt-1 bg-red-600;
+}
+
+.dropdown-section-urls {
+  @apply pt-3;
+}
+
+tui-input ::ng-deep .t-custom-content {
+  pointer-events: unset;
+}

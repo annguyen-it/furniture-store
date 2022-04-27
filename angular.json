@@ -4,6 +4,19 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "furniture-store": "apps/furniture-store",
-    "furniture-store-e2e": "apps/furniture-store-e2e"
-  }
+    "furniture-store-e2e": "apps/furniture-store-e2e",
+    "web-shell-feature": "libs/web/shell/feature/web-shell",
+    "web-shell-ui-layout": "libs/web/shell/ui/layout",
+    "web-shell-ui-main-view": "libs/web/shell/ui/main-view",
+    "web-shell-ui-nav-bar": "libs/web/shell/ui/nav-bar",
+    "web-shared-assets": {
+      "projectType": "library",
+      "root": "libs/web/shared/assets",
+      "sourceRoot": "libs/web/shared/assets/src",
+      "prefix": "furniture-store",
+      "targets": {},
+      "tags": []
+    }
+  },
+  "defaultProject": "furniture-store"
 }

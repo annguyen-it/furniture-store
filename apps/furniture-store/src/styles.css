@@ -1,1 +1,8 @@
+@import './custom/global/';
+@import './custom/taiga-ui/';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */

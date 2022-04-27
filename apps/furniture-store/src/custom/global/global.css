@@ -1,0 +1,39 @@
+/* #region TuiLink */
+.fs-primary-link[tuiLink] {
+  --tui-link: var(--fs-secondary);
+  --tui-link-hover: var(--fs-primary);
+}
+/* #endregion */
+
+/* #Tui List */
+/* #region Common */
+ul.fs-primary-list {
+  --tui-primary: var(--fs-secondary);
+}
+
+ul.fs-primary-list li::before {
+  transition-property: background-color;
+  transition-duration: var(--tui-duration, 300ms);
+  transition-timing-function: ease-in-out;
+}
+ul.fs-primary-list li:hover::before {
+  --tui-primary: var(--fs-primary);
+}
+ul.fs-primary-list .tui-list__item {
+  @apply mt-1.5 pl-4;
+}
+ul.fs-primary-list .tui-list__item:first-child {
+  @apply mt-0;
+}
+ul.fs-primary-list .tui-list__item:before {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+/* #endregion */
+
+/* #region Small */
+ul.fs-primary-list.tui-list_small > .tui-list__item:before {
+  top: 0.4125rem;
+}
+/* #endregion */
+/* #endregion */
