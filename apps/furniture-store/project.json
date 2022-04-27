@@ -1,0 +1,96 @@
+{
+  "projectType": "application",
+  "root": "apps/furniture-store",
+  "sourceRoot": "apps/furniture-store/src",
+  "prefix": "furniture-store",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/furniture-store",
+        "index": "apps/furniture-store/src/index.html",
+        "main": "apps/furniture-store/src/main.ts",
+        "polyfills": "apps/furniture-store/src/polyfills.ts",
+        "tsConfig": "apps/furniture-store/tsconfig.app.json",
+        "assets": [
+          "apps/furniture-store/src/favicon.ico",
+          "apps/furniture-store/src/assets"
+        ],
+        "styles": ["apps/furniture-store/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/furniture-store/src/environments/environment.ts",
+              "with": "apps/furniture-store/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "furniture-store:build:production"
+        },
+        "development": {
+          "browserTarget": "furniture-store:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/furniture-store/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "furniture-store:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/furniture-store/**/*.ts",
+          "apps/furniture-store/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/furniture-store"],
+      "options": {
+        "jestConfig": "apps/furniture-store/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "furniture-store": "apps/furniture-store",
+    "furniture-store-e2e": "apps/furniture-store-e2e"
+  }
+}

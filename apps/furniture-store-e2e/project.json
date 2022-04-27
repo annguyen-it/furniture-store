@@ -1,0 +1,28 @@
+{
+  "root": "apps/furniture-store-e2e",
+  "sourceRoot": "apps/furniture-store-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/furniture-store-e2e/cypress.json",
+        "devServerTarget": "furniture-store:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "furniture-store:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/furniture-store-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["furniture-store"]
+}
