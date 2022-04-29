@@ -1,3 +1,7 @@
+header {
+  height: 86px;
+}
+
 .logo {
   height: 37px;
 }
@@ -17,8 +21,9 @@
 }
 
 .dropdown-section > h6::after {
+  @apply block w-11 h-px mt-1;
   content: '';
-  @apply block w-11 h-px mt-1 bg-red-600;
+  background-color: var(--fs-primary);
 }
 
 .dropdown-section-urls {

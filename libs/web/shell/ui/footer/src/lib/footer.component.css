@@ -1,0 +1,16 @@
+:host a:not(.black) {
+  --tui-link: #a3a3a3;
+}
+
+.section-title {
+  @apply font-semibold pb-3.5;
+}
+
+.section-title::after {
+  content: '';
+  @apply h-px w-12 mt-px block bg-black;
+}
+
+.section-link {
+  @apply mb-1 tracking-wide;
+}
