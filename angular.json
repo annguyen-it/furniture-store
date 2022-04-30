@@ -6,6 +6,292 @@
     "api-interfaces": "libs/api-interfaces",
     "furniture-store": "apps/furniture-store",
     "furniture-store-e2e": "apps/furniture-store-e2e",
+    "web-home-feature": {
+      "projectType": "library",
+      "root": "libs/web/home/feature",
+      "sourceRoot": "libs/web/home/feature/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/feature"],
+          "options": {
+            "jestConfig": "libs/web/home/feature/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/feature/**/*.ts",
+              "libs/web/home/feature/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-collection": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/collection",
+      "sourceRoot": "libs/web/home/ui/collection/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/collection"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/collection/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/collection/**/*.ts",
+              "libs/web/home/ui/collection/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-best-seller": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-best-seller",
+      "sourceRoot": "libs/web/home/ui/home-best-seller/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-best-seller"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-best-seller/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-best-seller/**/*.ts",
+              "libs/web/home/ui/home-best-seller/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-blog": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-blog",
+      "sourceRoot": "libs/web/home/ui/home-blog/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-blog"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-blog/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-blog/**/*.ts",
+              "libs/web/home/ui/home-blog/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-brand": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-brand",
+      "sourceRoot": "libs/web/home/ui/home-brand/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-brand"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-brand/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-brand/**/*.ts",
+              "libs/web/home/ui/home-brand/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-category": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-category",
+      "sourceRoot": "libs/web/home/ui/home-category/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-category"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-category/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-category/**/*.ts",
+              "libs/web/home/ui/home-category/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-hot-product": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-hot-product",
+      "sourceRoot": "libs/web/home/ui/home-hot-product/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-hot-product"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-hot-product/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-hot-product/**/*.ts",
+              "libs/web/home/ui/home-hot-product/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-join": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-join",
+      "sourceRoot": "libs/web/home/ui/home-join/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-join"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-join/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-join/**/*.ts",
+              "libs/web/home/ui/home-join/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-media": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-media",
+      "sourceRoot": "libs/web/home/ui/home-media/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-media"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-media/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-media/**/*.ts",
+              "libs/web/home/ui/home-media/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-room": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-room",
+      "sourceRoot": "libs/web/home/ui/home-room/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-room"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-room/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-room/**/*.ts",
+              "libs/web/home/ui/home-room/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-home-ui-home-story": {
+      "projectType": "library",
+      "root": "libs/web/home/ui/home-story",
+      "sourceRoot": "libs/web/home/ui/home-story/src",
+      "prefix": "furniture-store",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/home/ui/home-story"],
+          "options": {
+            "jestConfig": "libs/web/home/ui/home-story/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/home/ui/home-story/**/*.ts",
+              "libs/web/home/ui/home-story/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "web-shared-assets": {
       "projectType": "library",
       "root": "libs/web/shared/assets",
@@ -15,6 +301,32 @@
       "tags": []
     },
     "web-shell-feature": "libs/web/shell/feature/web-shell",
+    "web-shell-ui-button-scroll-to-top": {
+      "projectType": "library",
+      "root": "libs/web/shell/ui/button-scroll-to-top",
+      "sourceRoot": "libs/web/shell/ui/button-scroll-to-top/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shell/ui/button-scroll-to-top"],
+          "options": {
+            "jestConfig": "libs/web/shell/ui/button-scroll-to-top/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shell/ui/button-scroll-to-top/**/*.ts",
+              "libs/web/shell/ui/button-scroll-to-top/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "web-shell-ui-footer": {
       "projectType": "library",
       "root": "libs/web/shell/ui/footer",
