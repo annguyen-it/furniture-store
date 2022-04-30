@@ -10,17 +10,27 @@
     </div>
     <div class="w-3/12 px-4">
       <h6 class="section-title uppercase">Help</h6>
-      <ul></ul>
+      <ul>
+        <li *ngFor="let url of helpUrls" class="section-link">
+          <a tuiLink class="fs-primary-link">{{ url.name }}</a>
+        </li>
+      </ul>
     </div>
     <div class="w-3/12 px-4">
       <h6 class="section-title uppercase">Service</h6>
       <ul>
-        <li></li>
+        <li *ngFor="let url of servicesUrls" class="section-link">
+          <a tuiLink class="fs-primary-link">{{ url.name }}</a>
+        </li>
       </ul>
     </div>
     <div class="w-3/12 px-4">
       <h5 class="text-base font-semibold">Follow us</h5>
-      <ul></ul>
+      <ul>
+        <li *ngFor="let url of followUrls" class="section-link">
+          <a tuiLink class="fs-primary-link">{{ url.name }}</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -40,7 +50,9 @@
         <a tuiLink class="fs-primary-link black">Terms</a>
       </li>
       <li class="px-4">
-        <a tuiLink class="fs-primary-link black">*Promo T&Cs Apply (view here)</a>
+        <a tuiLink class="fs-primary-link black"
+          >*Promo T&Cs Apply (view here)</a
+        >
       </li>
     </ul>
   </div>
