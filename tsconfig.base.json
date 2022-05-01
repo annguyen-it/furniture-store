@@ -16,6 +16,18 @@
     "baseUrl": ".",
     "paths": {
       "@furniture-store/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@furniture-store/api/account/data-access": [
+        "libs/api/account/data-access/src/index.ts"
+      ],
+      "@furniture-store/api/account/feature": [
+        "libs/api/account/feature/src/index.ts"
+      ],
+      "@furniture-store/api/auth/data-access": [
+        "libs/api/auth/data-access/src/index.ts"
+      ],
+      "@furniture-store/api/auth/feature": [
+        "libs/api/auth/feature/src/index.ts"
+      ],
       "@furniture-store/api/core/feature": [
         "libs/api/core/feature/src/index.ts"
       ],

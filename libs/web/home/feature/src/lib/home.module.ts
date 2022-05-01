@@ -5,7 +5,7 @@ import { HomeComponent } from './home.component';
 import { CollectionModule } from '@furniture-store/web/home/ui/collection';
 import { HomeCategoryModule } from '@furniture-store/web/home/ui/home-category';
 import { HomeRoomModule } from '@furniture-store/web/home/ui/home-room';
-import { HomeHotProductModule } from '@furniture-store/web/home/ui/home-hot-product';
+import { HomeHotProductModule } from 'libs/web/home/ui/home-best-seller/src/lib';
 import { HomeBestSellerModule } from '@furniture-store/web/home/ui/home-best-seller';
 import { HomeStoryModule } from '@furniture-store/web/home/ui/home-story';
 import { HomeBlogModule } from '@furniture-store/web/home/ui/home-blog';
