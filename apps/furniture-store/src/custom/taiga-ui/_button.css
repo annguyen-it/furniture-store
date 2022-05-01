@@ -1,18 +1,32 @@
 /* Primary */
 tui-wrapper[data-appearance='fs-primary'] {
   color: #ffffff;
-  background-color: var(--fs-secondary);
+  background-color: var(--fs-primary);
 }
 
 tui-wrapper[data-appearance='fs-primary'][data-state='hovered'],
 tui-wrapper[data-appearance='fs-primary'][data-state='pressed'] {
-  background-color: var(--fs-primary);
+  background-color: #cc5900;
 }
 
 tui-wrapper[data-appearance='fs-primary'][data-state='disabled'] {
   background-color: #eaecee;
 }
 
+/* Secondary */
+tui-wrapper[data-appearance='fs-secondary'] {
+  color: #ffffff;
+  background-color: var(--fs-secondary);
+}
+
+tui-wrapper[data-appearance='fs-secondary'][data-state='hovered'],
+tui-wrapper[data-appearance='fs-secondary'][data-state='pressed'] {
+  background-color: var(--fs-primary);
+}
+
+tui-wrapper[data-appearance='fs-secondary'][data-state='disabled'] {
+  background-color: #eaecee;
+}
 
 /* Flat */
 tui-wrapper[data-appearance='fs-flat'] {
