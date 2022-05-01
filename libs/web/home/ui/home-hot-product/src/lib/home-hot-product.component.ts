@@ -6,4 +6,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./home-hot-product.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeHotProductComponent {}
+export class HomeHotProductComponent {
+  public items = [{}, {}, {}, {}, {}, {}, {}, {}];
+}
