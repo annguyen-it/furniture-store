@@ -2,6 +2,10 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "api-account-data-access": "libs/api/account/data-access",
+    "api-account-feature": "libs/api/account/feature",
+    "api-auth-data-access": "libs/api/auth/data-access",
+    "api-auth-feature": "libs/api/auth/feature",
     "api-core": "libs/api/core/feature",
     "api-interfaces": "libs/api-interfaces",
     "furniture-store": "apps/furniture-store",
