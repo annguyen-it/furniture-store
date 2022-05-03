@@ -1,0 +1,44 @@
+.container {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../assets/images/bg1-h1.jpg');
+}
+
+.title-container {
+  margin-top: -100px;
+}
+
+.subtitle {
+  color: #8d8d8d;
+}
+
+.title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 48px;
+  height: 2px;
+  left: 0;
+  background: #ff6f00;
+}
+
+.description {
+  color: #8d8d8d;
+}
+
+.btn-about {
+  padding: 15px 40px;
+  background-color: #ff6f00;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.btn-about {
+  margin-top: 80px;
+}
+
+.btn-about:hover {
+  background-color: #cc5900;
+}
