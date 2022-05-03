@@ -13,6 +13,24 @@ tui-wrapper[data-appearance='fs-primary'][data-state='disabled'] {
   background-color: #eaecee;
 }
 
+/* Primary white */
+tui-wrapper[data-appearance='fs-primary-white'] {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+tui-wrapper[data-appearance='fs-primary-white'][data-state='hovered'],
+tui-wrapper[data-appearance='fs-primary-white'][data-state='pressed'] {
+  color: #ffffff;
+  background-color: var(--fs-primary);
+  border-color: var(--fs-primary);
+}
+
+tui-wrapper[data-appearance='fs-primary-white'][data-state='disabled'] {
+  background-color: #eaecee;
+}
+
 /* Secondary */
 tui-wrapper[data-appearance='fs-secondary'] {
   color: #ffffff;

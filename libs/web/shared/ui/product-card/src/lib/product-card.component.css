@@ -1,3 +1,10 @@
 :host {
   display: block;
+  color: var(--fs-primary);
+}
+
+.buttons button {
+  @apply rounded-none transition duration-500;
+  @apply translate-x-full group-hover:translate-x-0;
+  @apply opacity-0 group-hover:opacity-100;
 }
