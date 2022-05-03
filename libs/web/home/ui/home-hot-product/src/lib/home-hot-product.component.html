@@ -1,1 +1,28 @@
-<p>home-hot-product works!</p>
+<div
+  class="title relative mb-7 pb-6 px-4 flex justify-between items-center after:absolute after:bottom-px after:w-12 after:h-0.5"
+>
+  <h2 class="text-3xl">Hot Products</h2>
+  <tui-tabs [(activeItemIndex)]="activeTabIndex">
+    <button tuiTab class="tab">Latest product</button>
+    <button tuiTab class="tab">Top rating</button>
+    <button tuiTab class="tab">Best sellers</button>
+  </tui-tabs>
+</div>
+
+<div [ngSwitch]="activeTabIndex" class="wrapper flex flex-wrap">
+  <ng-container *ngSwitchCase="0">
+    <div *ngFor="let item of latestProducts" class="card">
+      <fs-product-card [item]="item"></fs-product-card>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="1">
+    <div *ngFor="let item of topRating" class="card">
+      <fs-product-card [item]="item"></fs-product-card>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <div *ngFor="let item of bestSellers" class="card">
+      <fs-product-card [item]="item"></fs-product-card>
+    </div>
+  </ng-container>
+</div>

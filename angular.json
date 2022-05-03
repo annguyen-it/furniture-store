@@ -2,6 +2,10 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "api-account-data-access": "libs/api/account/data-access",
+    "api-account-feature": "libs/api/account/feature",
+    "api-auth-data-access": "libs/api/auth/data-access",
+    "api-auth-feature": "libs/api/auth/feature",
     "api-core": "libs/api/core/feature",
     "api-interfaces": "libs/api-interfaces",
     "furniture-store": "apps/furniture-store",
@@ -298,6 +302,32 @@
       "sourceRoot": "libs/web/shared/assets/src",
       "prefix": "furniture-store",
       "targets": {},
+      "tags": []
+    },
+    "web-shared-ui-product-card": {
+      "projectType": "library",
+      "root": "libs/web/shared/ui/product-card",
+      "sourceRoot": "libs/web/shared/ui/product-card/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/ui/product-card"],
+          "options": {
+            "jestConfig": "libs/web/shared/ui/product-card/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/ui/product-card/**/*.ts",
+              "libs/web/shared/ui/product-card/**/*.html"
+            ]
+          }
+        }
+      },
       "tags": []
     },
     "web-shell-feature": "libs/web/shell/feature/web-shell",
