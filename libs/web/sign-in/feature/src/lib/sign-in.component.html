@@ -1,0 +1,91 @@
+<div class="h-screen bg-[#ff6e40]">
+  <div class="flex items-center min-h-full px-7 py-4">
+    <div class="container w-full min-h-full mx-auto px-3">
+      <div class="relative min-w-0 flex flex-col m-auto rounded-lg bg-white">
+        <div class="flex">
+          <div class="w-full min-h-[500px] p-7 flex-grow">
+            <div class="ml-1/12 w-10/12 px-3">
+              <div class="text-center lg:hidden lg:text-left">
+                <img
+                  width="120"
+                  src="https://vetra.laborasyon.com/assets/images/logo.svg"
+                  alt="logo"
+                  class="inline"
+                />
+              </div>
+              <div class="my-12 text-center lg:text-left">
+                <h1 class="mb-2 text-[27px] leading-5">Sign In</h1>
+                <p class="mb-4 text-gray-400">Sign in to Vetra to continue</p>
+              </div>
+              <form [formGroup]="form" class="mb-12">
+                <div class="tui-form__row">
+                  <tui-input formControlName="email">
+                    Enter email
+                    <input tuiTextfield type="email" autofocus />
+                  </tui-input>
+                </div>
+                <div class="tui-form__row">
+                  <tui-input-password formControlName="password">
+                    Enter password
+                    <input tuiTextfield />
+                  </tui-input-password>
+                </div>
+                <div class="tui-form__row text-center lg:text-left">
+                  <p class="text-xs mb-4">
+                    Can't access your account?
+                    <a tuiLink class="fs-primary-link">
+                      Reset your password now
+                    </a>
+                    .
+                  </p>
+                  <button tuiButton>Sign In</button>
+                </div>
+              </form>
+              <div class="social-links">
+                <a href="#">
+                  <i class="mdi mdi-google-plus bg-[#db4437]"></i>
+                  Sign in with Google
+                </a>
+                <a href="#">
+                  <i class="mdi mdi-facebook bg-[#3b5998]"></i>
+                  Sign in with Facebook
+                </a>
+              </div>
+              <p class="mt-12 mb-4 text-center lg:mt-0 lg:hidden">
+                Don't have an account?
+                <a tuiLink class="fs-primary-link">Sign up</a>.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-full min-h-[500px] p-7 hidden flex-col justify-between items-center flex-grow border-l border-[#dee2e6] text-center lg:flex"
+          >
+            <div>
+              <img
+                width="120"
+                src="https://vetra.laborasyon.com/assets/images/logo.svg"
+                alt="logo"
+              />
+            </div>
+            <div>
+              <h3 class="mb-2 text-2xl font-bold">Welcome to Vetra!</h3>
+              <p class="my-12 text-lg">
+                If you don't have an account, would you like to register right
+                now?
+              </p>
+              <a tuiButton>Sign Up</a>
+            </div>
+            <ul class="mb-4">
+              <li class="inline-block mr-2">
+                <a tuiLink class="fs-primary-link">Privacy Policy</a>
+              </li>
+              <li class="inline-block">
+                <a tuiLink class="fs-primary-link">Terms & Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.social-links a {
+  @apply mb-4 p-0.5 pr-5 flex items-center;
+  @apply border border-gray-300 rounded-lg;
+  @apply transition duration-300 hover:border-blue-500;
+}
+
+.social-links a i {
+  @apply w-10 h-10 mr-4 flex justify-center items-center;
+  @apply rounded-lg text-white text-xl;
+}

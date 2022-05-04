@@ -6,7 +6,7 @@ tui-wrapper[data-appearance='fs-primary'] {
 
 tui-wrapper[data-appearance='fs-primary'][data-state='hovered'],
 tui-wrapper[data-appearance='fs-primary'][data-state='pressed'] {
-  background-color: #cc5900;
+  background-color: var(--fs-primary-hover);
 }
 
 tui-wrapper[data-appearance='fs-primary'][data-state='disabled'] {

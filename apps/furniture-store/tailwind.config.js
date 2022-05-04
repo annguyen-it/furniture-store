@@ -7,7 +7,11 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      margin: {
+        '1/12': '8.33333%'
+      }
+    },
   },
   plugins: []
 };

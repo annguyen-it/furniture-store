@@ -13,4 +13,9 @@ export const webShellRoutes: Route[] = [
       },
     ],
   },
+  {
+    path: 'sign-in',
+    loadChildren: async () =>
+      (await import('@furniture-store/web/sign-in/feature')).SignInModule,
+  },
 ];

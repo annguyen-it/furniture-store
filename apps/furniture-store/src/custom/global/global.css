@@ -1,5 +1,9 @@
 /* #region TuiLink */
 .fs-primary-link[tuiLink] {
+  --tui-link: var(--fs-primary);
+  --tui-link-hover: var(--fs-primary-hover);
+}
+.fs-secondary-link[tuiLink] {
   --tui-link: var(--fs-secondary);
   --tui-link-hover: var(--fs-primary);
 }
