@@ -29,7 +29,3 @@ header {
 .dropdown-section-urls {
   @apply pt-3;
 }
-
-tui-input ::ng-deep .t-custom-content {
-  pointer-events: unset;
-}

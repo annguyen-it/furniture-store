@@ -1,0 +1,4 @@
+.wrapper {
+  grid-template-columns: 350px auto;
+  grid-template-rows: 90px calc(100vh - 90px);
+}

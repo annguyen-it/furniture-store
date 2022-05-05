@@ -54,17 +54,16 @@
         [tuiTextfieldLabelOutside]="true"
         [tuiTextfieldCustomContent]="inputContent"
         tuiTextfieldSize="m"
-        class="w-80 mr-14 ml-12 !rounded"
+        class="fs-custom-content w-80 mr-14 ml-12 !rounded"
       >
         Search
         <ng-template #inputContent>
           <button
-            tuiButton
+            tuiIconButton
             appearance="fs-secondary"
-            class="!h-full !rounded -mr-2"
-          >
-            <i class="mdi mdi-magnify"></i>
-          </button>
+            icon="tuiIconSearch"
+            class="!h-full !w-16 !rounded -mr-2"
+          ></button>
         </ng-template>
       </tui-input>
     </div>

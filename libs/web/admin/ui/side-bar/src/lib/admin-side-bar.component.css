@@ -1,0 +1,8 @@
+.active {
+  @apply relative bg-[rgba(255,110,64,0.15)] text-[color:var(--fs-primary)];
+  @apply border-x-4 border-solid border-[color:var(--fs-primary)];
+}
+
+.active .icon-wrapper {
+  @apply bg-[#f5f4fe];
+}

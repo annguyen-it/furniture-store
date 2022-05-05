@@ -17,12 +17,7 @@ const TAIGA_UI = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: SignInComponent,
-      },
-    ]),
+    RouterModule.forChild([{ path: '', component: SignInComponent }]),
     ...TAIGA_UI,
   ],
   declarations: [SignInComponent],

@@ -3,6 +3,22 @@ import { LayoutComponent } from '@furniture-store/web/shell/ui/layout';
 
 export const webShellRoutes: Route[] = [
   {
+    path: 'sign-in',
+    loadChildren: async () =>
+      (await import('@furniture-store/web/sign-in/feature')).SignInModule,
+  },
+  {
+    path: 'admin',
+    children: [
+      {
+        path: '',
+        loadChildren: async () =>
+          (await import('@furniture-store/web/admin/feature/container'))
+            .WebAdminFeatureContainerModule,
+      },
+    ],
+  },
+  {
     path: '',
     component: LayoutComponent,
     children: [
@@ -12,10 +28,5 @@ export const webShellRoutes: Route[] = [
           (await import('@furniture-store/web/home/feature')).HomeModule,
       },
     ],
-  },
-  {
-    path: 'sign-in',
-    loadChildren: async () =>
-      (await import('@furniture-store/web/sign-in/feature')).SignInModule,
   },
 ];

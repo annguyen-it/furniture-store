@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'normal': '14px'
+      },
       margin: {
         '1/12': '8.33333%'
       }

@@ -9,7 +9,7 @@
 }
 /* #endregion */
 
-/* #Tui List */
+/* #region Tui List */
 /* #region Common */
 ul.fs-primary-list {
   --tui-primary: var(--fs-secondary);
@@ -40,4 +40,10 @@ ul.fs-primary-list.tui-list_small > .tui-list__item:before {
   top: 0.4125rem;
 }
 /* #endregion */
+/* #endregion */
+
+/* #region Tui Input */
+tui-input.fs-custom-content .t-custom-content {
+  pointer-events: unset;
+}
 /* #endregion */

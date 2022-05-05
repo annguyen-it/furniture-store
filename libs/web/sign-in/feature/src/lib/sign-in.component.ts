@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { tuiButtonOptionsProvider } from '@taiga-ui/core';
 
 @Component({
@@ -19,8 +20,16 @@ export class SignInComponent {
   public form!: FormGroup;
 
   /** CONSTRUCTOR */
-  constructor(private readonly fb: FormBuilder) {
+  constructor(
+    private readonly fb: FormBuilder,
+    private readonly router: Router
+  ) {
     this.initForm();
+  }
+
+  /** PUBLIC PROPERTIES */
+  public signIn(): void {
+    this.router.navigate(['admin']);
   }
 
   /** PRIVATE METHODS */
