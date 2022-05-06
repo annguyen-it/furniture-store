@@ -10,6 +10,162 @@
     "api-interfaces": "libs/api-interfaces",
     "furniture-store": "apps/furniture-store",
     "furniture-store-e2e": "apps/furniture-store-e2e",
+    "web-admin-feature-container": {
+      "projectType": "library",
+      "root": "libs/web/admin/feature/container",
+      "sourceRoot": "libs/web/admin/feature/container/src",
+      "prefix": "furniture-store",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/admin/feature/container"],
+          "options": {
+            "jestConfig": "libs/web/admin/feature/container/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/admin/feature/container/**/*.ts",
+              "libs/web/admin/feature/container/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-admin-feature-dashboard": {
+      "projectType": "library",
+      "root": "libs/web/admin/feature/dashboard",
+      "sourceRoot": "libs/web/admin/feature/dashboard/src",
+      "prefix": "fs-admin",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/admin/feature/dashboard"],
+          "options": {
+            "jestConfig": "libs/web/admin/feature/dashboard/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/admin/feature/dashboard/**/*.ts",
+              "libs/web/admin/feature/dashboard/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-admin-layout": {
+      "projectType": "library",
+      "root": "libs/web/admin/ui/layout",
+      "sourceRoot": "libs/web/admin/ui/layout/src",
+      "prefix": "fs-admin",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/admin/ui/layout"],
+          "options": {
+            "jestConfig": "libs/web/admin/ui/layout/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/admin/ui/layout/**/*.ts",
+              "libs/web/admin/ui/layout/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-admin-main-view": {
+      "projectType": "library",
+      "root": "libs/web/admin/ui/main-view",
+      "sourceRoot": "libs/web/admin/ui/main-view/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/admin/ui/main-view"],
+          "options": {
+            "jestConfig": "libs/web/admin/ui/main-view/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/admin/ui/main-view/**/*.ts",
+              "libs/web/admin/ui/main-view/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-admin-nav-bar": {
+      "projectType": "library",
+      "root": "libs/web/admin/ui/nav-bar",
+      "sourceRoot": "libs/web/admin/ui/nav-bar/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/admin/ui/nav-bar"],
+          "options": {
+            "jestConfig": "libs/web/admin/ui/nav-bar/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/admin/ui/nav-bar/**/*.ts",
+              "libs/web/admin/ui/nav-bar/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-admin-side-bar": {
+      "projectType": "library",
+      "root": "libs/web/admin/ui/side-bar",
+      "sourceRoot": "libs/web/admin/ui/side-bar/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/admin/ui/side-bar"],
+          "options": {
+            "jestConfig": "libs/web/admin/ui/side-bar/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/admin/ui/side-bar/**/*.ts",
+              "libs/web/admin/ui/side-bar/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "web-home-feature": {
       "projectType": "library",
       "root": "libs/web/home/feature",
@@ -385,6 +541,58 @@
     },
     "web-shell-ui-layout": "libs/web/shell/ui/layout",
     "web-shell-ui-main-view": "libs/web/shell/ui/main-view",
-    "web-shell-ui-nav-bar": "libs/web/shell/ui/nav-bar"
+    "web-shell-ui-nav-bar": "libs/web/shell/ui/nav-bar",
+    "web-sign-in-feature": {
+      "projectType": "library",
+      "root": "libs/web/sign-in/feature",
+      "sourceRoot": "libs/web/sign-in/feature/src",
+      "prefix": "fs",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/sign-in/feature"],
+          "options": {
+            "jestConfig": "libs/web/sign-in/feature/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/sign-in/feature/**/*.ts",
+              "libs/web/sign-in/feature/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-sign-up-feature": {
+      "projectType": "library",
+      "root": "libs/web/sign-up/feature",
+      "sourceRoot": "libs/web/sign-up/feature/src",
+      "prefix": "furniture-store",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/sign-up/feature"],
+          "options": {
+            "jestConfig": "libs/web/sign-up/feature/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/sign-up/feature/**/*.ts",
+              "libs/web/sign-up/feature/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    }
   }
 }

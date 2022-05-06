@@ -1,5 +1,5 @@
-@import './custom/global/';
 @import './custom/taiga-ui/';
+@import './custom/global/';
 
 @tailwind base;
 @tailwind components;
