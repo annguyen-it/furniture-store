@@ -31,6 +31,24 @@
       "@furniture-store/api/core/feature": [
         "libs/api/core/feature/src/index.ts"
       ],
+      "@furniture-store/web/admin/feature/container": [
+        "libs/web/admin/feature/container/src/index.ts"
+      ],
+      "@furniture-store/web/admin/feature/dashboard": [
+        "libs/web/admin/feature/dashboard/src/index.ts"
+      ],
+      "@furniture-store/web/admin/ui/layout": [
+        "libs/web/admin/ui/layout/src/index.ts"
+      ],
+      "@furniture-store/web/admin/ui/main-view": [
+        "libs/web/admin/ui/main-view/src/index.ts"
+      ],
+      "@furniture-store/web/admin/ui/nav-bar": [
+        "libs/web/admin/ui/nav-bar/src/index.ts"
+      ],
+      "@furniture-store/web/admin/ui/side-bar": [
+        "libs/web/admin/ui/side-bar/src/index.ts"
+      ],
       "@furniture-store/web/home/feature": [
         "libs/web/home/feature/src/index.ts"
       ],
@@ -87,6 +105,12 @@
       ],
       "@furniture-store/web/shell/ui/nav-bar": [
         "libs/web/shell/ui/nav-bar/src/index.ts"
+      ],
+      "@furniture-store/web/sign-in/feature": [
+        "libs/web/sign-in/feature/src/index.ts"
+      ],
+      "@furniture-store/web/sign-up/feature": [
+        "libs/web/sign-up/feature/src/index.ts"
       ]
     }
   },
