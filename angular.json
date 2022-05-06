@@ -567,6 +567,32 @@
         }
       },
       "tags": []
+    },
+    "web-sign-up-feature": {
+      "projectType": "library",
+      "root": "libs/web/sign-up/feature",
+      "sourceRoot": "libs/web/sign-up/feature/src",
+      "prefix": "furniture-store",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/sign-up/feature"],
+          "options": {
+            "jestConfig": "libs/web/sign-up/feature/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/sign-up/feature/**/*.ts",
+              "libs/web/sign-up/feature/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }

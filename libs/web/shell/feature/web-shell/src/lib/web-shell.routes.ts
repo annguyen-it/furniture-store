@@ -8,6 +8,11 @@ export const webShellRoutes: Route[] = [
       (await import('@furniture-store/web/sign-in/feature')).SignInModule,
   },
   {
+    path: 'sign-up',
+    loadChildren: async () =>
+      (await import('@furniture-store/web/sign-up/feature')).SignUpModule,
+  },
+  {
     path: 'admin',
     children: [
       {

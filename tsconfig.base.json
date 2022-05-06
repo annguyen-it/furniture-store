@@ -108,6 +108,9 @@
       ],
       "@furniture-store/web/sign-in/feature": [
         "libs/web/sign-in/feature/src/index.ts"
+      ],
+      "@furniture-store/web/sign-up/feature": [
+        "libs/web/sign-up/feature/src/index.ts"
       ]
     }
   },
