@@ -31,6 +31,10 @@
       "@furniture-store/api/core/feature": [
         "libs/api/core/feature/src/index.ts"
       ],
+      "@furniture-store/api/core/utils": ["libs/api/core/utils/src/index.ts"],
+      "@furniture-store/shared/data-access": [
+        "libs/shared/data-access/src/index.ts"
+      ],
       "@furniture-store/web/admin/feature/container": [
         "libs/web/admin/feature/container/src/index.ts"
       ],

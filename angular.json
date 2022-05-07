@@ -7,9 +7,33 @@
     "api-auth-data-access": "libs/api/auth/data-access",
     "api-auth-feature": "libs/api/auth/feature",
     "api-core": "libs/api/core/feature",
+    "api-core-utils": "libs/api/core/utils",
     "api-interfaces": "libs/api-interfaces",
     "furniture-store": "apps/furniture-store",
     "furniture-store-e2e": "apps/furniture-store-e2e",
+    "shared-data-access": {
+      "root": "libs/shared/data-access",
+      "sourceRoot": "libs/shared/data-access/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/shared/data-access/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "web-admin-feature-container": {
       "projectType": "library",
       "root": "libs/web/admin/feature/container",
