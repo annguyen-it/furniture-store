@@ -7,9 +7,33 @@
     "api-auth-data-access": "libs/api/auth/data-access",
     "api-auth-feature": "libs/api/auth/feature",
     "api-core": "libs/api/core/feature",
+    "api-core-utils": "libs/api/core/utils",
     "api-interfaces": "libs/api-interfaces",
     "furniture-store": "apps/furniture-store",
     "furniture-store-e2e": "apps/furniture-store-e2e",
+    "shared-data-access": {
+      "root": "libs/shared/data-access",
+      "sourceRoot": "libs/shared/data-access/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/shared/data-access/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "web-admin-feature-container": {
       "projectType": "library",
       "root": "libs/web/admin/feature/container",
@@ -452,12 +476,85 @@
       },
       "tags": []
     },
+    "web-shared-app-config": {
+      "root": "libs/web/shared/app-config",
+      "sourceRoot": "libs/web/shared/app-config/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/web/shared/app-config/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/app-config"],
+          "options": {
+            "jestConfig": "libs/web/shared/app-config/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "web-shared-assets": {
       "projectType": "library",
       "root": "libs/web/shared/assets",
       "sourceRoot": "libs/web/shared/assets/src",
       "prefix": "furniture-store",
       "targets": {},
+      "tags": []
+    },
+    "web-shared-data-access-furniture-store-api": {
+      "root": "libs/web/shared/data-access/furniture-store-api",
+      "sourceRoot": "libs/web/shared/data-access/furniture-store-api/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/shared/data-access/furniture-store-api/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/web/shared/data-access/furniture-store-api"
+          ],
+          "options": {
+            "jestConfig": "libs/web/shared/data-access/furniture-store-api/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-shared-data-access-models": {
+      "root": "libs/web/shared/data-access/models",
+      "sourceRoot": "libs/web/shared/data-access/models/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/web/shared/data-access/models/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/shared/data-access/models"],
+          "options": {
+            "jestConfig": "libs/web/shared/data-access/models/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
       "tags": []
     },
     "web-shared-ui-product-card": {
@@ -563,6 +660,29 @@
               "libs/web/sign-in/feature/**/*.ts",
               "libs/web/sign-in/feature/**/*.html"
             ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "web-sign-up-data-access": {
+      "root": "libs/web/sign-up/data-access",
+      "sourceRoot": "libs/web/sign-up/data-access/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/web/sign-up/data-access/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/sign-up/data-access"],
+          "options": {
+            "jestConfig": "libs/web/sign-up/data-access/jest.config.ts",
+            "passWithNoTests": true
           }
         }
       },

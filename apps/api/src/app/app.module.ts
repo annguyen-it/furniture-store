@@ -1,12 +1,10 @@
+import { ApiAccountFeatureModule } from '@furniture-store/api/account/feature';
 import { ApiCoreModule } from '@furniture-store/api/core/feature';
 import { Module } from '@nestjs/common';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
 @Module({
-  imports: [ApiCoreModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [ApiCoreModule, ApiAccountFeatureModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
