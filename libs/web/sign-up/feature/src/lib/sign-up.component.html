@@ -1,28 +1,82 @@
-<div class="Sign_up">
-  <div class="wrapper">
-    <h2>Register</h2>
-    <form action="#">
-      <div class="input-box">
-        <input type="text" placeholder="Enter your name" required />
+<div
+  class="min-h-screen flex justify-center items-center bg-gradient-to-b from-[#ddd6f3] to-[#faaca8]"
+>
+  <div
+    class="relative w-full max-w-[530px] p-8 bg-white rounded-md shadow-[0_5px_10px_rgba(0,0,0,0.1)]"
+  >
+    <h2
+      class="relative text-2xl font-semibold text-gray-700 before:absolute before:bottom-0 before:h-[3px] before:w-7 before:bg-[#4070f4] before:rounded-xl"
+    >
+      Register
+    </h2>
+    <form [formGroup]="form" class="mt-6">
+      <div class="tui-form__row">
+        <tui-input formControlName="username" size="m">Username</tui-input>
+        <tui-error
+          [error]="[] | tuiFieldError | async"
+          formControlName="username"
+        ></tui-error>
       </div>
-      <div class="input-box">
-        <input type="text" placeholder="Enter your email" required />
+      <div class="tui-form__row">
+        <tui-input-password formControlName="password" size="m">
+          Password
+        </tui-input-password>
+        <tui-error
+          [error]="[] | tuiFieldError | async"
+          formControlName="password"
+        ></tui-error>
       </div>
-      <div class="input-box">
-        <input type="password" placeholder="Create password" required />
+      <div class="tui-form__row">
+        <tui-input-password formControlName="confirmPassword" size="m">
+          Confirm password
+        </tui-input-password>
+        <tui-error
+          [error]="[] | tuiFieldError | async"
+          formControlName="confirmPassword"
+        ></tui-error>
       </div>
-      <div class="input-box">
-        <input type="password" placeholder="Confirm password" required />
+      <div class="tui-form__row tui-form__row_multi-fields">
+        <div class="tui-form__multi-field">
+          <tui-input formControlName="firstName" size="m">First name</tui-input>
+          <tui-error
+            [error]="[] | tuiFieldError | async"
+            formControlName="firstName"
+          ></tui-error>
+        </div>
+        <div class="tui-form__multi-field">
+          <tui-input formControlName="lastName" size="m">Last name</tui-input>
+          <tui-error
+            [error]="[] | tuiFieldError | async"
+            formControlName="lastName"
+          ></tui-error>
+        </div>
       </div>
-      <div class="policy">
-        <input type="checkbox" />
-        <h3>I accept all terms & condition</h3>
+      <div class="tui-form__row">
+        <tui-input formControlName="email" size="m">Email (optional)</tui-input>
+        <tui-error
+          [error]="[] | tuiFieldError | async"
+          formControlName="email"
+        ></tui-error>
       </div>
-      <div class="input-box button">
-        <input type="Submit" value="Register Now" />
+      <div class="tui-form__row">
+        <tui-checkbox-labeled formControlName="accept">
+          I accept all terms & condition
+        </tui-checkbox-labeled>
+        <tui-error
+          [error]="[] | tuiFieldError | async"
+          formControlName="accept"
+        ></tui-error>
       </div>
-      <div class="text">
-        <h3>Already have an account? <a href="#">Login now</a></h3>
+      <div class="tui-form__buttons tui-form__buttons_align_center">
+        <button tuiButton (click)="onConfirm()" class="tui-form__button">
+          Register Now
+        </button>
+      </div>
+      <div class="tui-form__row text-center">
+        <h3>
+          Already have an account?
+          <a tuiLink routerLink="/sign-in">Login now</a>
+        </h3>
       </div>
     </form>
   </div>
