@@ -2,8 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
+import { AppConfig } from "@furniture-store/web/shared/app-config";
+
+export const environment: AppConfig = {
   production: false,
+  baseUrl: 'http://localhost:3333/api',
 };
 
 /*
